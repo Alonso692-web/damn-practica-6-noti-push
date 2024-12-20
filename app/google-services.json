@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "131655911202",
+    "project_id": "practica04notipush",
+    "storage_bucket": "practica04notipush.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131655911202:android:5ac635ca01c63116f6877b",
+        "android_client_info": {
+          "package_name": "com.example.ddam_behm_pracitca_04"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsV0LKRFmDOV4OpdtPS1nCeHM8_BKszLo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

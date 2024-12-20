@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="numeros">#e7c6ff</color>
+    <color name="simbolos">#98f5e1</color>
+    <color name="regresar">#90dbf4</color>
+    <color name="eliminar">#ffd670</color>
+    <color name="botones">#003049</color>
+    <color name="aceptar">#06d6a0</color>
+    <color name="cancelar">#d9d9d9</color>
+
+</resources>
