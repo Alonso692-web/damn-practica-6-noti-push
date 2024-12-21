@@ -8,6 +8,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
@@ -26,6 +27,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import android.widget.EditText
+import android.widget.Toast
 import com.example.ddam_behm_pracitca_04.roomnoti.CustomRecyclerViewActivityNotificacion
 import com.example.ddam_behm_pracitca_04.roomnoti.entities.NotificacionEntity
 import com.example.ddam_behm_pracitca_04.user.Usuario
@@ -57,16 +59,31 @@ class MainActivity : AppCompatActivity() {
         val noti = findViewById<Button>(R.id.btnNotificaciones)
         val SignOut = findViewById<Button>(R.id.btnSignOut)
         val creditos = findViewById<Button>(R.id.btnCreditos)
+        val btnSalir = findViewById<Button>(R.id.btnSalirApp)
+
+        Toast.makeText(this, "Bienvenido", Toast.LENGTH_SHORT).show()
+
+        btnSalir.setOnClickListener {
+            finishAffinity()
+        }
+
+        noti.setOnClickListener {
+            val intentBasicListView =
+                Intent(this, CustomRecyclerViewActivityNotificacion::class.java)
+            startActivity(intentBasicListView)
+        }
 
         //Accion para cambiar al listador (historial de notificaciones)
-        dashboard.setOnClickListener{
-            val intentBasicListView = Intent(this, CustomRecyclerViewActivityNotificacion::class.java)
+        dashboard.setOnClickListener {
+            val intentBasicListView =
+                Intent(this, Usuario::class.java)
             startActivity(intentBasicListView)
         }
 
         //Accion para cambiar al empty activity view de usuarios, el que crea nuevos
         // usuarios y se muestran en la tabla
-        SignOut.setOnClickListener{
+        SignOut.setOnClickListener {
+            Toast.makeText(this, "Cerrando sesión", Toast.LENGTH_SHORT).show()
             val intentBasicListView = Intent(this, Usuario::class.java)
             startActivity(intentBasicListView)
         }
@@ -95,7 +112,7 @@ class MainActivity : AppCompatActivity() {
 
 
         //Creditos
-        creditos.setOnClickListener{
+        creditos.setOnClickListener {
             val intentBasicListView = Intent(this, CreditosActivity::class.java)
             startActivity(intentBasicListView)
         }
@@ -163,6 +180,7 @@ class MainActivity : AppCompatActivity() {
             alertDialog.dismiss()
         }
     }
+
     private fun createNotificationChannel(channelId: String) {
         // Crea el canal solo en API 26 o superior
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -200,7 +218,7 @@ class MainActivity : AppCompatActivity() {
     ) {
         val notificationId = 1
         val builder = NotificationCompat.Builder(context, channelId)
-            .setSmallIcon(android.R.drawable.ic_dialog_info)
+            .setSmallIcon(android.R.drawable.ic_dialog_dialer)
             .setContentTitle(title)
             .setContentText(message)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)

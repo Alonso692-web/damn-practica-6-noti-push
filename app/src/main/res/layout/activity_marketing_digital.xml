@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFF3E0"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -13,44 +14,61 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#80F0F0F0"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="40dp"
+        android:paddingHorizontal="20dp">
 
         <TextView
             android:id="@+id/textViewTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:text="Marketing Digital"
             android:textSize="24sp"
             android:textStyle="bold" />
 
         <Button
+            android:id="@+id/btnCreditos"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#080808"
+            android:text="Creditos" />
+
+        <Button
             android:id="@+id/btnDashboard"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Dashboard" />
+            android:backgroundTint="#EF6C00"
+            android:text="Registrar usuario"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnNotificaciones"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Notificaciones" />
+            android:backgroundTint="#EF6C00"
+            android:text="Notificaciones Guardadas"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnSignOut"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Sign out" />
-
-        <Button
-            android:id="@+id/btnCreditos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Creditos" />
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="#EF6C00"
+            android:text="Cerrar sesión"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
     </LinearLayout>
 
     <!-- Sección principal -->
@@ -73,7 +91,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:text="Nombre"
+                android:text="Name"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
@@ -83,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:text="Correo"
+                android:text="Email"
                 android:textSize="12sp"
                 android:textStyle="bold" />
 
@@ -103,7 +121,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:text=""
+                android:gravity="center"
+                android:text="Send"
                 android:textSize="12sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -119,17 +138,29 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="end"
+            android:gravity="center"
             android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSalirApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#FF0000"
+                android:text="Salir de la aplicación"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/btnEnviar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:layout_marginTop="16dp"
                 android:backgroundTint="#4CAF50"
-                android:text="Enviar"
-                android:textColor="#FFFFFF" />
+                android:text="+"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

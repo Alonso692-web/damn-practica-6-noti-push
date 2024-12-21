@@ -34,14 +34,16 @@ class Usuario : AppCompatActivity() {
                 FirebaseDatabase.getInstance().getReference("usuarios")
                     .child(id).setValue(nuevoUsuario)
                     .addOnSuccessListener {
-                        Toast.makeText(this, "Usuario registrado", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Usuario registrado con éxito", Toast.LENGTH_SHORT)
+                            .show()
                         finish()
                     }
                     .addOnFailureListener {
-                        Toast.makeText(this, "Error al registrar usuario", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Error al registrar", Toast.LENGTH_SHORT).show()
                     }
             } else {
-                Toast.makeText(this, "Por favor llena todos los campos", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Por favor ingrese todos los campos", Toast.LENGTH_SHORT)
+                    .show()
             }
         }
     }
